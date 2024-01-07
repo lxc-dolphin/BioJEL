@@ -28,35 +28,25 @@ sh install_EL.sh
 ```
 
 ## Training, Evaluation and Prediction
-If using GPU: [-gpu] = 0 and [-cuda] = "True", otherwise: [-gpu] = -1
+If using GPU: [-gpu] = 0 and [-cuda] = "True", otherwise: [-gpu] = -1 # default setting: using GPU
+
+data direction: [-data_dir] = ./$$$/###
 
 - training
-1. training without external knowledge or training the baseline
+training without external knowledge or training the baseline or with external knowledge
 ```bash
-python run_e2e_span.py -do_train True -add_candi False -gpu 0 -cuda True
+python run_e2e_span.py  -data_dir ./$$$/### -do_train -use_SOTA_model True
 ```
-2. training with external knowledge 
-```bash
-python run_e2e_span.py -do_train True -add_candi True -gpu 0 -cuda True -use_SOTA_model True
-```
-
 
 - evaluation
 ```bash
-python run_e2e_span.py -do_eval True -add_candi False -gpu 0 -cuda True -use_SOTA_model True
+python run_e2e_span.py  -data_dir ./$$$/### -do_eval -use_SOTA_model True
 ```
 
 - prediction
-1. predict a single sentence or text file
+predict a single sentence or text file or for event extraciton
 ```bash
-python run_e2e_span.py -do_test_sihgle True -use_SOTA_model True
-```
-or 
-```bash
-python run_e2e_span.py -single_test_file -test_input_file [file name] -use_SOTA_model True
+python run_e2e_span.py  -data_dir ./$$$/### -do_test -use_SOTA_model True
 ```
 
-2. predict event for entity linking task
-```bash
-python run_e2e_span.py -do_test_ELdata True -use_SOTA_model True
-```
+
