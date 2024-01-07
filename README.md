@@ -1,5 +1,5 @@
 # Biomedical Entity Linking n (Joint4E-EL) Model For [Joint event extraction and entity linking model](https://arxiv.org/abs/2305.14645)
-- A deep leanring framework with BERTs and classification lay to link named entities to a knowledge base. The EL model results are reported in our [paper](https://arxiv.org/abs/2305.14645)
+- A deep leanring framework with BERTs and classification layer to link named entities to a knowledge base. The EL model results are reported in our [paper](https://arxiv.org/abs/2305.14645)
 
 ## Model Structures
 - Based on [Pretrained BERT](https://github.com/allenai/scibert) as encoder.
